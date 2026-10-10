@@ -1,0 +1,5 @@
+.nav { display: flex; align-items: center; gap: clamp(1.05rem, 2.5vw, 2.15rem); }
+.nav a { position: relative; padding: .6rem 0; color: #a69e97; font-size: .79rem; font-weight: 450; text-decoration: none; transition: color .17s; white-space: nowrap; }
+.nav a:hover, .nav a[aria-current=page] { color: var(--text); }
+.nav a[aria-current=page]::after { position: absolute; right: 0; bottom: .17rem; left: 0; height: 2px; background: var(--accent); content: ""; }
+@media (max-width: 880px) { .nav { position: absolute; z-index: 21; top: 4.7rem; right: 0; left: 0; display: none; align-items: stretch; gap: .3rem; padding: .6rem 1.25rem 1.1rem; background: #100f0e; } .open { display: flex; flex-direction: column; } .nav a { padding: .8rem .35rem; font-size: .9rem; } .nav a[aria-current=page]::after { right: auto; bottom: .45rem; width: 1.7rem; } }

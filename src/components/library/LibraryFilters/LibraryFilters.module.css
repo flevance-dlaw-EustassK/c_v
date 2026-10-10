@@ -1,0 +1,4 @@
+.filters { display:grid; grid-template-columns:minmax(12rem,1fr) 10rem 12rem; gap:.55rem; margin-block:1.2rem 1rem; }
+.filters select { min-width:0; }
+.search input { min-height:2.8rem; }
+@media(max-width:650px) { .filters { grid-template-columns:1fr 1fr; gap:.42rem; } .search { grid-column:1/-1; } .filters select { font-size:.69rem; } }

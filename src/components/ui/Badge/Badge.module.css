@@ -1,0 +1,2 @@
+.badge { display: inline-flex; align-items: center; width: fit-content; padding: .33rem .55rem; background: #ffffff12; color: var(--text-2); font-size: .68rem; letter-spacing: .04em; }
+.accent { background: #8b00002b; color: #f18f8f; }

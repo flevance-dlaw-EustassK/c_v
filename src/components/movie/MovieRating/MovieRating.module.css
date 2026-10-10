@@ -1,0 +1,6 @@
+.rating { display: inline-flex; align-items: center; gap: .32rem; color: var(--text); font-size: .8rem; font-variant-numeric: tabular-nums; }
+.rating span { color: #d8a265; }
+.stars { display: flex; gap: .25rem; }
+.stars button { padding: .1rem; border: 0; background: transparent; color: #ffffff42; font-size: 1.7rem; cursor: pointer; transition: color .16s, transform .16s; }
+.stars button:hover, .stars .filled { color: #efba69; }
+.stars button:hover { transform: scale(1.18); }

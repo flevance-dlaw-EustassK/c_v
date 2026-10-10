@@ -1,0 +1,4 @@
+.kernel { position: fixed; z-index: 90; width: 1.4rem; height: 1.4rem; overflow: hidden; border-radius: 50% 45% 48% 55%; background: radial-gradient(circle at 36% 34%, #fffbe7 0 12%, #ffd76f 34%, #eeac3a 73%, #b36a23 100%); box-shadow: inset -3px -4px 5px #a466263b, 0 3px 8px #0006; pointer-events: none; animation: popcornJump 950ms cubic-bezier(.15,.75,.38,1) forwards; }
+.kernel::after { position: absolute; inset: 42%; border-radius: 50%; background: #e19b37; content: ""; }
+@keyframes popcornJump { 0% { opacity: 0; transform: translate3d(0,0,0) scale(.35) rotate(-20deg); } 13% { opacity: 1; } 53% { opacity: 1; transform: translate3d(var(--drift),-57px,0) scale(1) rotate(var(--twirl)); } 100% { opacity: 0; transform: translate3d(calc(var(--drift) * 1.6),-110px,0) scale(.72) rotate(calc(var(--twirl) * 1.7)); } }
+@media(prefers-reduced-motion:reduce) { .kernel { display: none; } }

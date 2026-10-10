@@ -1,0 +1,2 @@
+.curtain { position: fixed; z-index: 29; top: 4.45rem; left: 50%; width: min(22rem, 80vw); padding: .5rem .85rem; transform: translateX(-50%); background: #241512; box-shadow: 0 8px 32px #0008; color: #e9e2da; font-size: .63rem; letter-spacing: .16em; text-align: center; pointer-events: none; animation: clapboardFlash .5s cubic-bezier(.2,.8,.3,1) both; }
+.stripe { height: .22rem; margin-bottom: .38rem; background: repeating-linear-gradient(120deg, #f0e8dc 0 12px, #27211e 12px 24px); }

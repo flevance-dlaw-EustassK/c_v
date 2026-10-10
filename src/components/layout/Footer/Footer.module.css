@@ -1,0 +1,8 @@
+.footer { margin-top: clamp(4rem, 8vw, 8rem); border-top: 1px solid #ffffff12; background: #0d0b0a; }
+.inner { display: grid; min-height: 8rem; grid-template-columns: 1fr auto auto; align-items: center; gap: 1.3rem 3.5rem; width: min(100% - 6rem, 1440px); margin-inline: auto; padding-block: 1.7rem; }
+.brand { color: #e6dfd6; font-size: .72rem; font-weight: 700; letter-spacing: .17em; text-decoration: none; }
+.inner nav { display: flex; flex-wrap: wrap; gap: 1.3rem; }
+.inner nav a { color: var(--text-3); font-size: .75rem; text-decoration: none; }
+.inner nav a:hover { color: var(--text); }
+.inner small { grid-column: 1 / -1; color: #56514b; font-size: .68rem; }
+@media(max-width:760px) { .inner { grid-template-columns: 1fr auto; gap: 1rem; width: calc(100% - 2.5rem); } .inner nav:nth-of-type(2) { grid-column: 1/-1; } .inner small { grid-column: 1/-1; } }

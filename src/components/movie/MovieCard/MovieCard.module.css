@@ -1,0 +1,18 @@
+.card { min-width: 0; }
+.artwork { position: relative; overflow: hidden; background: var(--surface-2); }
+.artwork > a:first-child { display: block; overflow: hidden; }
+.card:hover .artwork img { transform: scale(1.035); }
+.information { padding-top: .82rem; }
+.nameLine { display: flex; align-items: baseline; justify-content: space-between; gap: .45rem; }
+.title { overflow: hidden; color: var(--text); font-size: .9rem; font-weight: 550; text-decoration: none; text-overflow: ellipsis; white-space: nowrap; }
+.title:hover { color: #f2cfcf; }
+.nameLine > span { flex: 0 0 auto; }
+.hover { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; gap: .7rem; padding: 1rem; background: linear-gradient(180deg, transparent 27%, #080706e8); opacity: 0; transition: opacity .22s; pointer-events: none; }
+.card:hover .hover, .card:focus-within .hover { opacity: 1; }
+.hover p { max-width: 18rem; margin: 0; color: #eee7e2; font-size: .75rem; line-height: 1.55; text-align: center; }
+.details { display: inline-flex; align-items: center; justify-content: center; gap: .35rem; padding: .58rem .8rem; border: 1px solid #ffffff68; background: #100e0dd9; color: white; font-size: .75rem; text-decoration: none; pointer-events: auto; }
+.details svg { width: .92rem; height: .92rem; fill: currentColor; }
+.favorite { position: absolute; z-index: 2; top: .55rem; right: .55rem; width: 2.15rem!important; height: 2.15rem!important; background: #0a0908b8!important; color: #fff!important; pointer-events: auto; }
+.favorite svg { width: 1rem!important; height: 1rem!important; }
+.isFavorite svg { fill: #b42832; color: #de5860; transform-origin: center; animation: favoriteBloom .34s ease-out; }
+@media (hover: none) { .hover { display: none; } }

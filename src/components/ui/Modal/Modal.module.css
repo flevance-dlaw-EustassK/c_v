@@ -1,0 +1,6 @@
+.dialog { width:min(35rem,calc(100vw - 2rem)); max-height:min(48rem,calc(100dvh - 2rem)); padding:1rem; overflow-y:auto; border:1px solid #ffffff23; border-radius:1px; background:#141210; color:var(--text); box-shadow:0 1rem 5rem #000b; animation:modalArrive .23s cubic-bezier(.2,.8,.3,1); }
+.dialog::backdrop { background:#030201bf; backdrop-filter:blur(5px); }
+.top { display:flex; align-items:center; justify-content:space-between; gap:1rem; margin-bottom:.5rem; }
+.top strong { font-size:.75rem; font-weight:550; letter-spacing:.12em; text-transform:uppercase; }
+@keyframes modalArrive { from { opacity:0; transform:translateY(9px) scale(.987); } to { opacity:1; transform:none; } }
+@media(prefers-reduced-motion:reduce){ .dialog { animation:none; } }

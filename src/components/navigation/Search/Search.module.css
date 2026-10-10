@@ -1,0 +1,24 @@
+.search { position: relative; z-index: 31; }
+.search > button { color: #e9e4df!important; }
+.panel { position: absolute; top: calc(100% + 1rem); right: -4.1rem; width: min(33rem, calc(100vw - 2rem)); border: 1px solid #ffffff18; background: #151311; box-shadow: 0 1rem 4rem #000b; animation: searchIn .18s ease-out both; }
+.inputLine { display: flex; align-items: center; gap: .65rem; padding: .55rem .65rem .55rem .95rem; border-bottom: 1px solid #ffffff15; }
+.inputLine > svg { width: 1.1rem; flex: 0 0 auto; color: var(--text-2); }
+.inputLine input { min-width: 0; border: 0; background: transparent; box-shadow: none; }
+.inputLine input:focus { border: 0; outline: none; }
+.inputLine button { flex: 0 0 auto; }
+.shortcut { padding: .2rem .35rem; border: 1px solid #ffffff20; color: var(--text-3); font-size: .65rem; }
+.results { padding: .4rem; }
+.result { display: flex; width: 100%; align-items: center; gap: .8rem; padding: .5rem; border: 0; background: transparent; color: var(--text); text-align: left; cursor: pointer; }
+.result:hover, .result[aria-selected=true] { background: #ffffff0c; }
+.result > div { width: 2.4rem; flex: 0 0 auto; }
+.result > span:nth-child(2) { display: grid; gap: .24rem; }
+.result strong { font-size: .84rem; font-weight: 550; }
+.result small { color: var(--text-3); font-size: .72rem; }
+.resultRating { margin-left: auto; color: #edc276; font-size: .76rem; }
+.catalogLink { display: flex; width: 100%; align-items: center; justify-content: center; gap: .5rem; padding: .8rem; border: 0; background: transparent; color: #d29978; font: inherit; font-size: .78rem; cursor: pointer; }
+.catalogLink svg { width: .95rem; }
+.empty, .hint { padding: .9rem 1rem; margin: 0; color: var(--text-3); font-size: .77rem; }
+.hint button { border: 0; background: none; color: #e5a5a5; cursor: pointer; }
+.hint span { display: block; padding-top: .65rem; font-size: .67rem; }
+@keyframes searchIn { from { opacity: 0; transform: translateY(-6px); } to { opacity: 1; transform: translateY(0); } }
+@media (max-width: 520px) { .panel { right: -3rem; } }

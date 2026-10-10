@@ -1,0 +1,11 @@
+.profile { position: relative; margin-left: auto; }
+.trigger { display: flex; align-items: center; gap: .55rem; padding: .28rem 0 .28rem .35rem; border: 0; background: transparent; color: var(--text); font: inherit; cursor: pointer; }
+.avatar { display: grid; width: 2rem; height: 2rem; place-items: center; background: #4a2422; color: #f1dad0; font-size: .78rem; }
+.name { font-size: .77rem; }
+.trigger > svg { width: .85rem; color: var(--text-3); transition: transform .2s; }
+.trigger[aria-expanded=true] > svg { transform: rotate(90deg); }
+.menu { position: absolute; z-index: 41; top: calc(100% + .75rem); right: 0; display: grid; width: 12.5rem; padding: .45rem; background: #181614; box-shadow: 0 1rem 3rem #0009; animation: profileIn .17s ease-out; }
+.menu a { padding: .65rem .7rem; color: var(--text-2); font-size: .79rem; text-decoration: none; }
+.menu a:hover { background: #ffffff08; color: white; }
+.greeting { padding: .65rem .7rem; border-bottom: 1px solid #ffffff13; color: #c3b9b0; font-size: .7rem; }
+@keyframes profileIn { from { opacity: 0; transform: translateY(-5px); } to { opacity: 1; transform: translateY(0); } }

@@ -1,0 +1,9 @@
+.section { margin-block: clamp(2.7rem, 6vw, 5.5rem); }
+.heading { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.3rem; }
+.heading h2 { margin: 0; font-size: clamp(1.35rem, 2.2vw, 1.8rem); font-weight: 550; letter-spacing: -.035em; }
+.controls { display: flex; gap: .25rem; }
+.rail { display: grid; grid-auto-columns: clamp(145px, 15.8vw, 218px); grid-auto-flow: column; gap: clamp(.8rem, 2vw, 1.3rem); padding: .15rem 0 1.15rem; overflow-x: auto; overscroll-behavior-inline: contain; scrollbar-color: #45403a transparent; scrollbar-width: thin; scroll-snap-type: x mandatory; }
+.rail > * { scroll-snap-align: start; }
+.seeAll { color: var(--text-2); font-size: .78rem; text-decoration: none; }
+.seeAll:hover { color: white; }
+@media (max-width: 600px) { .controls { display: none; } .rail { grid-auto-columns: 43vw; } }

@@ -1,0 +1,6 @@
+.page-transition { min-height: 60vh; animation: pageReveal .43s cubic-bezier(.22,.65,.3,1) both; }
+@keyframes pageReveal { from { opacity: .35; transform: translate3d(0, 8px, 0); } to { opacity: 1; transform: translate3d(0, 0, 0); } }
+@keyframes resultRise { from { opacity: 0; transform: translateY(15px) scale(.985); } to { opacity: 1; transform: translateY(0) scale(1); } }
+@keyframes favoriteBloom { 45% { transform: scale(1.32); } }
+@keyframes clapboardFlash { 0% { opacity: 0; transform: translateY(-12px); } 14% { opacity: 1; transform: translateY(0); } 73% { opacity: .96; transform: translateY(0); } 100% { opacity: 0; transform: translateY(-3px); } }
+@media(prefers-reduced-motion:reduce) { *, *::before,*::after { scroll-behavior: auto!important; animation-duration: .01ms!important; animation-iteration-count: 1!important; transition-duration: .01ms!important; } }
