@@ -1,3 +1,5 @@
+import type { MovieAtmosphere } from "./picker";
+
 export interface Movie {
   id: string;
   title: string;
@@ -8,10 +10,10 @@ export interface Movie {
   rating: number;
   poster: string;
   backdrop: string;
-  director: string;
   description: string;
   country?: string;
-  cast?: string[];
   mood?: string[];
-  status?: "watching" | "watched" | "plan";
+  atmosphere: MovieAtmosphere;
+  studioIds?: string[];
+  gallery?: string[];
 }

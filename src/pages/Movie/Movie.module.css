@@ -22,11 +22,20 @@
 .credits { display:grid; gap:.27rem; margin-top:1.2rem; }
 .credits>span,.userRating>span,.creditGrid>div>span { color:#ac8f7b; font-size:.58rem; letter-spacing:.15em; }
 .credits strong { font-size:.82rem; font-weight:490; }
+.credits strong a { color:inherit; text-decoration:none; }
+.credits strong a:hover { color:#e0aa90; }
 .genres { display:flex; flex-wrap:wrap; gap:.4rem; margin-top:1rem; }
 .genres>span { border:1px solid #ffffff1f; background:#0a09086a; }
 .actions { display:flex; flex-wrap:wrap; gap:.55rem; margin-top:1.6rem; }
 .actions>button { padding-inline:.85rem; font-size:.76rem; }
 .actions>button>svg { width:.95rem; height:.95rem; }
+.collectionAction { display:flex; flex-wrap:wrap; align-items:center; gap:.4rem; margin-top:.7rem; }
+.collectionAction select,.collectionAction button { min-height:2.25rem; padding:.45rem .6rem; border:1px solid #ffffff22; border-radius:0; background:#11100fdd; color:#d6c7bc; font:inherit; font-size:.67rem; }
+.collectionAction select { max-width:14rem; }
+.collectionAction button { cursor:pointer; }
+.collectionAction button:disabled { opacity:.55; cursor:default; }
+.collectionAction small { flex-basis:100%; color:#c9a58d; font-size:.63rem; }
+.collectionAction>a { color:#d9a18d; font-size:.68rem; text-decoration:none; }
 .userRating { display:grid; gap:.45rem; justify-items:start; align-content:center; padding-top:11rem; }
 .userRating>strong { color:#ddd1c3; font-size:.73rem; font-weight:450; }
 .lower { padding-top:.8rem; }
@@ -37,6 +46,33 @@
 .creditGrid>div { display:grid; gap:.36rem; }
 .creditGrid>div>span { color:var(--text-3); }
 .creditGrid>div>strong { color:#cfc5bc; font-size:.82rem; font-weight:430; line-height:1.65; }
+.creditGrid>.peopleSection { grid-column:1/-1; min-width:0; }
+.castRail { display:flex; gap:.9rem; overflow-x:auto; padding:.2rem .1rem .75rem; scrollbar-color:#6b3732 transparent; scrollbar-width:thin; }
+.creditRow { display:grid; gap:.3rem; padding:.5rem 0; border-bottom:1px solid var(--line); }
+.creditRow>span { color:var(--text-3); font-size:.65rem; }
+.creditRow>strong { color:#cfc5bc; font-size:.82rem; font-weight:430; line-height:1.65; }
+.creditRow>strong a { color:inherit; text-decoration:none; }
+.creditRow>strong a:hover { color:#e0aa90; }
+.relatedLinks { display:flex; flex-wrap:wrap; gap:.5rem; }
+.relatedLinks a { padding:.55rem .7rem; border:1px solid var(--line); color:#d5c4b7; font-size:.73rem; text-decoration:none; }
+.relatedLinks a:hover { border-color:#995c50; color:#f0d5ca; }
+.relatedLinks a span { margin-left:.4rem; color:#ca8b73; }
+.relatedSection,.gallery { margin-top:4rem; }
+.relatedHeading { display:flex; align-items:end; justify-content:space-between; gap:1rem; margin-bottom:1.1rem; }
+.relatedHeading h2,.gallery h2 { margin:.4rem 0 0; font-family:var(--font-display); font-size:clamp(1.8rem,4vw,2.8rem); font-weight:430; letter-spacing:-.07em; }
+.relatedHeading>a { color:#dda894; font-size:.72rem; text-decoration:none; }
+.awardGrid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:.7rem; }
+.award { display:grid; gap:.5rem; padding:1rem; border:1px solid var(--line); background:linear-gradient(135deg,#201714,#11100f); color:var(--text); text-decoration:none; }
+.award:hover { border-color:#805144; }
+.award>span { color:#c5967e; font-size:.53rem; letter-spacing:.09em; line-height:1.5; }
+.award>strong { font-family:var(--font-display); font-size:1.05rem; font-weight:450; }
+.award>small { color:var(--text-2); font-size:.65rem; }
+.noAwards { color:var(--text-2); font-size:.76rem; line-height:1.7; }
+.noAwards a { color:#dda894; }
+.galleryGrid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:.7rem; margin-top:1.2rem; }
+.galleryGrid figure { position:relative; min-width:0; margin:0; overflow:hidden; background:var(--surface); }
+.galleryGrid img { display:block; width:100%; max-height:30rem; aspect-ratio:16/9; object-fit:cover; }
+.galleryGrid figcaption { position:absolute; right:.7rem; bottom:.6rem; color:#fff9; font-size:.52rem; letter-spacing:.13em; text-shadow:0 1px 3px #000; }
 .missing { min-height:60vh; display:grid; align-content:center; justify-items:center; }
 .missing a { color:#e6a893; }
 .trailer { display:grid; justify-items:center; padding:3.5rem 1rem; background:radial-gradient(ellipse at 50% 90%,#371714,#151210 68%); text-align:center; }
@@ -47,4 +83,6 @@
 .trailer>p { color:var(--text-3); font-size:.75rem; }
 @media(max-width:1020px){.feature{grid-template-columns:minmax(180px,235px) minmax(0,1fr);}.userRating{grid-column:2; grid-row:2; padding-top:0;}}
 @media(max-width:760px){.backdrop{min-height:auto;}.backdropInner{width:calc(100% - 2.5rem);padding:2rem 0 3.8rem;}.backdropLabel{margin-bottom:1.1rem;}.feature{grid-template-columns:clamp(116px,30vw,190px) minmax(0,1fr);gap:1.1rem;align-items:start;}.poster{grid-column:1;grid-row:1;}.details{grid-column:2;grid-row:1;padding:0;}.details h1{margin:.5rem 0 .65rem;font-size:clamp(2.35rem,8vw,4rem);}.original{font-size:.66rem;line-height:1.45;}.ratings{gap:.65rem;margin-top:.85rem;}.ratings>span:first-child{font-size:.9rem;}.ratings small{display:block;margin-left:0;font-size:.6rem;}.description{grid-column:1/-1;margin:.9rem 0;font-size:.87rem;line-height:1.7;}.credits{margin-top:.8rem;}.credits strong{font-size:.73rem;}.genres{gap:.32rem;margin-top:.8rem;}.genres>span{font-size:.63rem;}.actions{grid-column:1/-1;gap:.4rem;margin-top:1rem;}.actions>button{min-height:2.65rem;padding-inline:.62rem;font-size:.69rem;}.actions>button:last-child{flex:0 0 auto;}.userRating{grid-column:1/-1;grid-row:2;display:flex;align-items:center;gap:.75rem;padding:0;}.userRating>span{font-size:.55rem;}.userRating>strong{font-size:.66rem;}.stars button{font-size:1.35rem;}.creditsSection{grid-template-columns:1fr;gap:.55rem;margin-top:2rem;}.creditsSection>.eyebrow{grid-column:auto;}.creditsSection h2{font-size:2.8rem;}.creditGrid{grid-template-columns:1fr 1fr;gap:1rem;margin-top:.8rem;}}
+@media(max-width:760px){.awardGrid{grid-template-columns:1fr 1fr}.relatedSection,.gallery{margin-top:3rem}}
+@media(max-width:450px){.awardGrid,.galleryGrid{grid-template-columns:1fr}.relatedHeading{align-items:start;flex-direction:column}}
 @media(max-width:390px){.feature{grid-template-columns:105px minmax(0,1fr);gap:.85rem;}.details h1{font-size:2.2rem;}.actions{flex-wrap:wrap;}.actions>button{font-size:.64rem;}.userRating{flex-wrap:wrap;gap:.35rem .55rem;}}

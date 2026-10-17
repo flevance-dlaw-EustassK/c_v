@@ -7,16 +7,18 @@ import { Input } from "../../components/ui/Input/Input";
 import { Select } from "../../components/ui/Select/Select";
 import { useCineVault } from "../../app/CineVaultProvider";
 import { mockMovies } from "../../data/mockMovies";
+import { getMovieSearchText } from "../../data/movieCredits";
 import styles from "./Favorites.module.css";
 
 export function Favorites() {
   const { favorites } = useCineVault();
+  const favoriteMovies = mockMovies.filter((movie) => favorites.includes(movie.id));
   const [query, setQuery] = useState("");
   const [sort, setSort] = useState("rating");
   const movies = useMemo(() =>
     mockMovies.filter((movie) =>
       favorites.includes(movie.id) &&
-      `${movie.title} ${movie.originalTitle} ${movie.director}`
+      getMovieSearchText(movie)
         .toLocaleLowerCase("ru").includes(query.trim().toLocaleLowerCase("ru")),
     ).sort((a, b) => sort === "title" ? a.title.localeCompare(b.title, "ru") : sort === "year" ? b.year - a.year : b.rating - a.rating),
   [favorites, query, sort]);
@@ -26,7 +28,7 @@ export function Favorites() {
       <div className={styles.page}>
         <span className="eyebrow">САМЫЕ ДОРОГИЕ СЕРДЦУ</span>
         <div className={styles.heading}><div><h1 className="page-heading">Избранное<span>.</span></h1><p>Особенные истории, которые хочется сохранить.</p></div><span className={styles.edition}>ЛИЧНАЯ КОЛЛЕКЦИЯ&nbsp; · &nbsp;∞</span></div>
-        {favorites.length ? (
+        {favoriteMovies.length ? (
           <>
             <div className={styles.toolbar}>
               <label><Icon name="search" /><Input aria-label="Поиск среди избранных" onChange={(event) => setQuery(event.target.value)} placeholder="Найти среди любимого…" value={query} /></label>

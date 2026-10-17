@@ -1,0 +1,6 @@
+.card{display:flex;min-width:7.5rem;max-width:9rem;flex:0 0 7.5rem;flex-direction:column;gap:.35rem;color:var(--text-2);font-size:.72rem;line-height:1.45;text-decoration:none}
+.card:hover strong{color:#e0aa90}
+.card strong{color:var(--text);font-size:.76rem;font-weight:500}
+.card span{color:var(--text-3);font-size:.67rem}
+.portrait,.portraitFallback{display:grid;width:100%;aspect-ratio:4/5;place-items:center;object-fit:cover;background:linear-gradient(145deg,var(--surface-3),var(--surface));color:var(--text-2);font-family:Inter,sans-serif;font-size:1.25rem;letter-spacing:.08em}
+@media(max-width:760px){.card{min-width:6.7rem;max-width:6.7rem;flex-basis:6.7rem}.card strong{font-size:.7rem}.card span{font-size:.62rem}}

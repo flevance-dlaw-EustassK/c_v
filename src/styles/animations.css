@@ -4,3 +4,4 @@
 @keyframes favoriteBloom { 45% { transform: scale(1.32); } }
 @keyframes clapboardFlash { 0% { opacity: 0; transform: translateY(-12px); } 14% { opacity: 1; transform: translateY(0); } 73% { opacity: .96; transform: translateY(0); } 100% { opacity: 0; transform: translateY(-3px); } }
 @media(prefers-reduced-motion:reduce) { *, *::before,*::after { scroll-behavior: auto!important; animation-duration: .01ms!important; animation-iteration-count: 1!important; transition-duration: .01ms!important; } }
+:root[data-reduce-motion="true"] *, :root[data-reduce-motion="true"] *::before, :root[data-reduce-motion="true"] *::after { scroll-behavior:auto!important; animation:none!important; transition:none!important; }

@@ -3,7 +3,7 @@ import styles from "./MovieRating.module.css";
 interface MovieRatingProps {
   rating: number;
   value?: number;
-  onChange?: (rating: number) => void;
+  onChange?: (rating: number | null) => void;
 }
 
 export function MovieRating({ rating, value, onChange }: MovieRatingProps) {
@@ -16,7 +16,7 @@ export function MovieRating({ rating, value, onChange }: MovieRatingProps) {
             aria-label={`${index + 1} из 5 звёзд`}
             aria-pressed={value === index + 1}
             className={index < (value ?? 0) ? styles.filled : ""}
-            onClick={() => onChange(index + 1)}
+            onClick={() => onChange(value === index + 1 ? null : index + 1)}
             type="button"
           >
             ★

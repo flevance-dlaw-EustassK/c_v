@@ -22,6 +22,8 @@
 .grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:2rem 1.15rem;}
 .item{min-width:0;}
 .status{display:inline-block;margin-top:.5rem;padding:.21rem .42rem;border-left:2px solid #9b473c;color:#bfaba0;font-size:.61rem;}
+.statusControl{display:flex;align-items:center;justify-content:space-between;gap:.35rem;}
+.statusSelect{max-width:6.8rem;margin-top:.45rem;border:1px solid var(--line);border-radius:0;background:var(--surface);padding:.25rem .3rem;color:var(--text-2);font:inherit;font-size:.57rem;}
 .watching{border-color:#d0a25e;color:#e4c890;}
 .watched{border-color:#776d63;}
 .plan{border-color:#7673a1;}

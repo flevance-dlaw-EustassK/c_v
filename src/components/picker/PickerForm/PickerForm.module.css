@@ -1,7 +1,0 @@
-.form { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:1.4rem 3rem; }
-.action { grid-column:1/-1; display:flex; align-items:center; justify-content:space-between; gap:1rem; padding-top:1.2rem; border-top:1px solid var(--line); }
-.submit { display:inline-flex; min-height:3.25rem; align-items:center; gap:.7rem; padding:.75rem 1.2rem; border:0; background:var(--accent); color:white; font-size:.84rem; cursor:pointer; transition:background .2s,transform .2s; }
-.submit:hover { transform:translateY(-1px); background:var(--accent-hover); }
-.submit svg { width:1rem; }
-.note { color:var(--text-3); font-size:.7rem; }
-@media(max-width:600px){.form{grid-template-columns:1fr;gap:1.1rem;}.action{align-items:flex-start;flex-direction:column;}}

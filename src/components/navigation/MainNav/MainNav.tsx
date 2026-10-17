@@ -5,6 +5,7 @@ const navigationItems = [
   { label: "Главная", to: "/" },
   { label: "Фильмы", to: "/catalog" },
   { label: "Подбор", to: "/picker" },
+  { label: "Фестивали", to: "/festivals" },
   { label: "Моя фильмотека", to: "/library" },
 ];
 

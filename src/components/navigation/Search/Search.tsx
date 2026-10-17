@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { mockMovies } from "../../../data/mockMovies";
+import { getMovieSearchText } from "../../../data/movieCredits";
 import type { Movie } from "../../../types/movie";
 import { Icon } from "../../ui/Icon/Icon";
 import { IconButton } from "../../ui/IconButton/IconButton";
@@ -16,7 +17,7 @@ export function Search() {
   const input = useRef<HTMLInputElement>(null);
   const results = query.trim()
     ? mockMovies.filter((movie) =>
-        `${movie.title} ${movie.originalTitle} ${movie.director}`
+        getMovieSearchText(movie)
           .toLocaleLowerCase("ru")
           .includes(query.trim().toLocaleLowerCase("ru")),
       ).slice(0, 5)

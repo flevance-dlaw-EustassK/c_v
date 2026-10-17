@@ -5,6 +5,8 @@ import { MovieCard } from "../../components/movie/MovieCard/MovieCard";
 import { Icon } from "../../components/ui/Icon/Icon";
 import { Input } from "../../components/ui/Input/Input";
 import { Select } from "../../components/ui/Select/Select";
+import { getMovieSearchText } from "../../data/movieCredits";
+import { movieGenres } from "../../data/genres";
 import { mockMovies } from "../../data/mockMovies";
 import styles from "./Catalog.module.css";
 
@@ -20,8 +22,7 @@ export function Catalog() {
   useEffect(() => setQuery(searchParams.get("q") ?? ""), [searchParams]);
   const movies = useMemo(() => {
     const filtered = mockMovies.filter((movie) => {
-      const search = `${movie.title} ${movie.originalTitle} ${movie.director} ${movie.genres.join(" ")}`
-        .toLocaleLowerCase("ru");
+      const search = getMovieSearchText(movie).toLocaleLowerCase("ru");
       return (
         (!query || search.includes(query.toLocaleLowerCase("ru"))) &&
         (!genre || movie.genres.includes(genre)) &&
@@ -48,7 +49,7 @@ export function Catalog() {
         <div className={styles.toolbar}>
           <label className={styles.search}><Icon name="search" /><Input aria-label="Поиск фильмов каталога" onChange={(event) => setQuery(event.target.value)} placeholder="Название, режиссёр, жанр…" value={query} /></label>
           <Select aria-label="Фильтр жанра" onChange={(event) => setGenre(event.target.value)} value={genre}>
-            <option value="">Все жанры</option>{[...new Set(mockMovies.flatMap((movie) => movie.genres))].sort().map((item) => <option key={item}>{item}</option>)}
+            <option value="">Все жанры</option>{movieGenres.map((item) => <option key={item}>{item}</option>)}
           </Select>
           <Select aria-label="Фильтр года" onChange={(event) => setYear(event.target.value)} value={year}><option value="">Любой год</option><option value="before">До 2000</option><option value="older">До 2010</option><option value="2010s">2010–2014</option><option value="recent">2015 и новее</option></Select>
           <Select aria-label="Минимальный рейтинг" onChange={(event) => setRating(event.target.value)} value={rating}><option value="">Любой рейтинг</option><option value="9">От 9.0</option><option value="8">От 8.0</option><option value="7">От 7.0</option></Select>

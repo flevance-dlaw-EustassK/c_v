@@ -5,6 +5,7 @@ const links = [
   { text: "Главная", to: "/" },
   { text: "Фильмы", to: "/catalog" },
   { text: "Подбор", to: "/picker" },
+  { text: "Фестивали", to: "/festivals" },
   { text: "Фильмотека", to: "/library" },
 ];
 
